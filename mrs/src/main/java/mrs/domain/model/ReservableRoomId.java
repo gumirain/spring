@@ -2,8 +2,12 @@ package mrs.domain.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+
 import javax.persistence.Embeddable;
 
+//複合クラスであることを示すために@Embeddableアノテーションを付与する。↓複合クラス参考
+//https://qiita.com/nogitsune413/items/76a6e900e58ef949cc06
+@Embeddable
 public class ReservableRoomId implements Serializable{
 
 	private Integer roomId;

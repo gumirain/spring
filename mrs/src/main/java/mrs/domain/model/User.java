@@ -4,6 +4,7 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
+//Tableアノテーションを付与してマッピング先のテーブル名を取得する
 @Table(name = "user")
 public class User implements Serializable {
 
@@ -13,6 +14,8 @@ public class User implements Serializable {
 	private String firstName;
 	private String lastName;
 
+    //Enumeratedアノテーションを付与して、ユーザー権限をEnumにマッピングする。カラムの値にEnumの
+	//文字列表現が格納されるように、EnumType.STRINGを指定している。
 	@Enumerated(EnumType.STRING)
 	private RoleName roleName;
 
